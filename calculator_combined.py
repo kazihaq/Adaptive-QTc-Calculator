@@ -37,10 +37,10 @@ def set_background(image_file):
     )
 
 # Set the background (put this near the top of your script)
-set_background(r"D:\Documents\QTc-2\mat_plot_schip\background.png")
+set_background("background.png")
 
 # Load threshold CSV
-threshold_df = pd.read_csv(r"D:\Documents\QTc-2\mat_plot_schip\threshold.csv")
+threshold_df = pd.read_csv("threshold.csv")
 
 # Preprocess age_range column into min_age and max_age
 age_ranges = []
@@ -69,7 +69,7 @@ def classify_qtc(age, qtc):
         return "Age not found"
 
 def load_data():
-    data = scipy.io.loadmat(r"D:\\Documents\\QTc-2\\mat_plot_schip\\m_interp_data.mat")
+    data = scipy.io.loadmat("m_interp_data.mat")
     return {
         'Age_interp': data['Age_interp'].flatten(),
         'm_interp_all': data['m_interp_all'].flatten(),
