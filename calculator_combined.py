@@ -33,7 +33,10 @@ def set_background(image_file):
     st.markdown(css, unsafe_allow_html=True)
 
 # Set the background (put this near the top of your script)
-set_background("background.png")
+import os
+current_dir = os.path.dirname(__file__)
+image_path = os.path.join(current_dir, "background.png")
+set_background(image_path)
 
 # Load threshold CSV
 threshold_df = pd.read_csv("threshold.csv")
