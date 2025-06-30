@@ -19,6 +19,8 @@ except ModuleNotFoundError:
 import base64
 
 
+import os
+
 def set_background(image_file):
     with open(image_file, "rb") as file:
         encoded = base64.b64encode(file.read()).decode()
@@ -27,16 +29,17 @@ def set_background(image_file):
     .stApp {{
         background-image: url("data:image/png;base64,{encoded}");
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }}
     </style>
     """
     st.markdown(css, unsafe_allow_html=True)
 
-# Set the background (put this near the top of your script)
-import os
-current_dir = os.path.dirname(__file__)
-image_path = os.path.join(current_dir, "background.png")
+# Use this instead of hardcoded path
+image_path = os.path.join(os.path.dirname(__file__), "background.png")
 set_background(image_path)
+
 
 # Load threshold CSV
 threshold_df = pd.read_csv("threshold.csv")
