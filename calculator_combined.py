@@ -98,7 +98,7 @@ if HAS_STREAMLIT:
     st.markdown("<p style='font-size:20px; color:#FFFFFF ;'>This calulator computes adaptive QTc and classify for risk startification</p>", unsafe_allow_html=True)
     st.markdown("<p style='font-size:20px; color:#FFFFFF ;'>For details please visit : https://www.ahajournals.org/doi/abs/10.1161/CIRCEP.124.013237 </p>", unsafe_allow_html=True)
 
-    st.markdown("<p style='font-size:16px; color:#FFFFFF;'>Enter the following demographic and ECG parameters:</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:18px; color:#FFFFFF;'>Enter the following demographic (race/sex are optional) and ECG parameters:</p>", unsafe_allow_html=True)
 
 
     #st.title("QTcAd Calculator")
