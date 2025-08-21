@@ -93,7 +93,8 @@ data = load_data()
 if HAS_STREAMLIT:
     
     st.markdown("<h1 style='color:black;'>QTcAd Calculator</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='font-size:20px; color:#FFFFFF ;'>The age range can be is 1day to 20 years. Age must be in "day" unit </p>", unsafe_allow_html=True)
+    
+    st.markdown("<p style='font-size:20px; color:#FFFFFF;'>The age range is 1 day to 20 years. Age must be in the 'day' unit.</p>", unsafe_allow_html=True)
 
     st.markdown("<p style='font-size:20px; color:#FFFFFF ;'>This calulator computes adaptive QTc and screen pediactric patients for congenital LQTS. </p>", unsafe_allow_html=True)
     st.markdown("<p style='font-size:20px; color:#FFFFFF ;'>For details please visit : https://www.ahajournals.org/doi/abs/10.1161/CIRCEP.124.013237 </p>", unsafe_allow_html=True)
@@ -180,4 +181,5 @@ if HAS_STREAMLIT:
 
 else:
     print("Streamlit not available. Cannot display GUI.")
+
 
